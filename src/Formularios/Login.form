@@ -24,34 +24,41 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" attributes="0">
-              <EmptySpace min="-2" pref="136" max="-2" attributes="0"/>
+          <Group type="102" alignment="1" attributes="0">
+              <EmptySpace max="32767" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="Lusername" min="-2" pref="120" max="-2" attributes="0"/>
                   <Component id="Lpassword" min="-2" pref="120" max="-2" attributes="0"/>
-                  <Group type="102" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="12" pref="12" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="Password" min="-2" pref="100" max="-2" attributes="0"/>
                           <Component id="Username" min="-2" pref="99" max="-2" attributes="0"/>
+                          <Component id="Password" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
-              <EmptySpace max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="183" max="-2" attributes="0"/>
           </Group>
-          <Group type="102" alignment="1" attributes="0">
-              <EmptySpace pref="98" max="32767" attributes="0"/>
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="67" max="-2" attributes="0"/>
               <Component id="btnIngresar" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
+              <EmptySpace pref="120" max="32767" attributes="0"/>
               <Component id="btnCrearUsuario" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="87" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="89" max="-2" attributes="0"/>
+          </Group>
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="85" max="-2" attributes="0"/>
+              <Component id="jLabel1" min="-2" pref="277" max="-2" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="1" attributes="0">
-              <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="jLabel1" min="-2" pref="250" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="Lusername" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Component id="Username" min="-2" max="-2" attributes="0"/>
@@ -59,12 +66,12 @@
               <Component id="Lpassword" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Component id="Password" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="btnCrearUsuario" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="btnIngresar" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnCrearUsuario" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="35" max="32767" attributes="0"/>
+              <EmptySpace pref="66" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -90,8 +97,6 @@
     </Component>
     <Component class="javax.swing.JTextField" name="Username">
     </Component>
-    <Component class="javax.swing.JTextField" name="Password">
-    </Component>
     <Component class="javax.swing.JButton" name="btnCrearUsuario">
       <Properties>
         <Property name="text" type="java.lang.String" value="Crear Usuario"/>
@@ -103,6 +108,18 @@
     <Component class="javax.swing.JButton" name="btnIngresar">
       <Properties>
         <Property name="text" type="java.lang.String" value="Ingresar"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JPasswordField" name="Password">
+      <AccessibilityProperties>
+        <Property name="AccessibleContext.accessibleDescription" type="java.lang.String" value="Ingresar password"/>
+      </AccessibilityProperties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel1">
+      <Properties>
+        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+          <Image iconType="3" name="/Imagenes/User_Circle.png"/>
+        </Property>
       </Properties>
     </Component>
   </SubComponents>

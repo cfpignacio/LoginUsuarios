@@ -5,6 +5,8 @@
  */
 package Formularios;
 
+import Clases.Usuario;
+
 /**
  *
  * @author Notebook
@@ -27,17 +29,18 @@ public class CrearUsuario extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        Password1 = new javax.swing.JPasswordField();
         Lpassword = new javax.swing.JLabel();
         Lusername = new javax.swing.JLabel();
-        Password = new javax.swing.JTextField();
         Email = new javax.swing.JTextField();
         Lemail = new javax.swing.JLabel();
-        Username2 = new javax.swing.JTextField();
+        Username = new javax.swing.JTextField();
         Lemail1 = new javax.swing.JLabel();
         Dni = new javax.swing.JTextField();
         btnCrear = new javax.swing.JButton();
         Lpassword1 = new javax.swing.JLabel();
-        Password2 = new javax.swing.JTextField();
+        Password = new javax.swing.JPasswordField();
+        Password2 = new javax.swing.JPasswordField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("UsuariosApp");
@@ -79,17 +82,19 @@ public class CrearUsuario extends javax.swing.JFrame {
                             .addComponent(Email, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(Username2, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(Username, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(Lusername))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(Password, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(Lpassword))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(Lpassword1)
-                                    .addComponent(Password2, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addGap(57, 57, 57))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(Lpassword)
+                                        .addGap(35, 35, 35)
+                                        .addComponent(Lpassword1))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(Password, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(Password2, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                        .addGap(68, 68, 68))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(btnCrear)
                         .addGap(41, 41, 41))))
@@ -104,8 +109,8 @@ public class CrearUsuario extends javax.swing.JFrame {
                     .addComponent(Lusername))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Username, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(Password, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Username2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(Password2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(Lemail)
@@ -125,6 +130,21 @@ public class CrearUsuario extends javax.swing.JFrame {
 
     private void btnCrearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCrearActionPerformed
         // TODO add your handling code here:
+        
+        //Validamos
+        
+        
+        //Fin validacion
+        
+        Usuario user = new Usuario(Username.getText(),Password.getText(),Email.getText(),Dni.getText());
+        
+        
+        UserInfo ui = new UserInfo();
+        
+        ui.setInfo(user.getUsername(), user.getEmail(), user.getDni());
+        
+        ui.setVisible(true);
+        this.dispose();
         
         
     }//GEN-LAST:event_btnCrearActionPerformed
@@ -172,9 +192,10 @@ public class CrearUsuario extends javax.swing.JFrame {
     private javax.swing.JLabel Lpassword;
     private javax.swing.JLabel Lpassword1;
     private javax.swing.JLabel Lusername;
-    private javax.swing.JTextField Password;
-    private javax.swing.JTextField Password2;
-    private javax.swing.JTextField Username2;
+    private javax.swing.JPasswordField Password;
+    private javax.swing.JPasswordField Password1;
+    private javax.swing.JPasswordField Password2;
+    private javax.swing.JTextField Username;
     private javax.swing.JButton btnCrear;
     // End of variables declaration//GEN-END:variables
 }
