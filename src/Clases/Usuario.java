@@ -10,6 +10,7 @@ package Clases;
  * @author Notebook
  */
 public class Usuario {
+    private int id;
     private String username,password,email,dni;
 
     public Usuario(String username, String password, String email, String dni) {
